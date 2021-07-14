@@ -38,11 +38,11 @@
           <img height="45px" src="http://svl.stanford.edu//assets/images/c88c46b9e14bf897e57e597109c97005.png"> </img>
 
           <img height="45px" src="images/googlelogo.png"> </img>
-          <a class="brand">Behavior Challenge @ ICCV 2021</a>
+          <a class="brand">BEHAVIOR Challenge @ ICCV 2021</a>
           <div>
             <a class="brand">
-              <h5 class="pull-left">Large Scale Benchmark of Household Activities</h5>
-              <h5 class="pull-right"> hosted by Stanford Vision and Learning Lab </h5>
+              <h5 class="pull-left">Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments</h5>
+              <h5 class="pull-right"> hosted by the Stanford Vision and Learning Lab</h5>
             </a>
           </div>
         </div>
@@ -63,34 +63,12 @@
     <div class="container">
       <div class="row method-container">
         <div class="section-header">
-
-
           <div class="col-lg-12 col-md-12">
-			 <h4> <a href="https://github.com/StanfordVL/iGibsonChallenge2021">[Starter Code]</a> <a href="https://eval.ai/web/challenges/challenge-page/808/overview">[EvalAI Portal]</a> <a href="http://svl.stanford.edu/igibson/challenge2020.html">[Sim2Real Challenge with iGibson, CVPR2020]</a> </h4>
+			 <h4> <a href="https://github.com/StanfordVL/iGibsonChallenge2021">[Participation Guidelines]</a> <a href="https://eval.ai/web/challenges/challenge-page/808/overview">[Registration]</a>  <a href="http://svl.stanford.edu/igibson/challenge2020.html">[Starter Code]</a> </h4>
             <p class="section-description">
-              In recent years, learning algorithms have been achieving impressive results in vision-based indoor
-              autonomous navigation. Researchers in this field have successfully trained embodied agents to navigate to
-              a location defined by a target on-board camera image, a designated coordinate or an object category of
-              interest, or by following navigation instructions directly from language. These problems are usually
-              studied in static environments and have limited applicability to the dynamic scenarios inherent to real
-              human environments such as homes and offices. In these spaces, we find a large variety of objects with
-              which the mobile agent can interact, such as furniture, shoes, children toys, etc. We also find humans
-              (ourselves!) living in these environments and performing everyday activities. How to train embodied agents
-              that cope with dynamic environments remains a challenging research question. In fact, during the 2020
-              challenge we observed a significant performance gap between the navigation performance achieved in the
-              static case versus the dynamic environments with interactable objects and dynamic agents. In these dynamic
-              environments, the learning-based methods yielding the policies submitted by the participants outperformed
-              planning-based methods such as the planner in the ROS navigation stack. This trend indicates a promising
-              avenue for future research on robot learning for mobility around humans and movable objects in the built
-              environment. This year we present this challenge focused on the Interactive Navigation and Social
-              Navigation problems, and invite researchers around the world to push the frontiers of vision-based indoor
-              autonomous navigation by innovating with models and algorithms applied to these benchmarks.
+              A primary goal of embodied AI research is to develop intelligent agents that can assist humans in their everyday lives in activities like washing dishes or cleaning floors. While recent years we have seen excellent new benchmarks that helped the field, they are usually restricted to a few tasks, short horizon or in simplified scenarios. Solving real-world challenges requires a new benchmark with realistic, diverse, and complex activities. For this, we present in BEHAVIOR, a benchmark with the 100 household activities that represent a new challenge for embodied AI solutions.
             </p>
-            <p class="section-description">
-              We present iGibson Challenge 2021, implemented in collaboration with Robotics at Google. Compared to our
-              challenge last year
-            </p>
-            <ul>
+<!--             <ul>
               <li>
                 We significantly revamped <a href="http://svl.stanford.edu/igibson/">iGibson</a>, the Interactive Gibson
                 Environment [1], a novel interactive extension of our photorealistic Gibson simulator that can be used to
@@ -110,7 +88,7 @@
               a common framework for the field, converging around a unified set of tasks, simulation platforms, and 3D
               assets. The organizers will collectively share results across all these challenges at CVPR in June,
               providing a unique viewpoint on the state of embodied AI research and new directions for the subfield.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -122,32 +100,31 @@
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
 
-            <h2>Highlights of the Challenge</h2>
+            <h2>Characteristics of BEHAVIOR</h2>
             <hr>
 
             <div class="row">
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Highly Photorealistic Scenes</b></h4>
-                  <img src="images/cvpr21_scene.png" width=210 height=210> </img>
+                  <h4 class="title"><b>100 Common Household Activities</b></h4>
+                  <img src="media/beha.gif" width=210 height=210> </img>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Full Interactivity</b></h4>
-                  <img src="images/cvpr21_interactivity.gif" width=210 height=210> </img>
+                  <h4 class="title"><b>Full Control with Visual Input</b></h4>
+                  <img src="media/tpv.png" width=210 height=210> </img>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Pedestrian Simulation</b></h4>
-                  <img src="images/cvpr21_pedestrian_sim.gif" width=210 height=210> </img>
+                  <h4 class="title"><b>Multiple State Changes Involved</b></h4>
+                  <img src="media/sliced.gif" width=210 height=210> </img>
 
                 </div>
               </div>
@@ -156,174 +133,29 @@
           </div>
         </div>
       </div>
-
-  </section>
-
-  <section id="method">
-    <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
-            <h2>Tasks</h2>
-            <hr>
-           The iGibson Challenge 2021 uses the iGibson simulator [1] and is composed of two navigation tasks that represent important skills for autonomous visual navigation:
+           The activities in included in BEHAVIOR are:
             <br>
-            <br>
-
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <div class="box3 intro">
-                  <h4 class="title"><b>Interactive Navigation</b></h4>
-                  <img src="images/cvpr21_interactive_nav.png" width=250 height=300> </img>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12">
-                <div class="box3 intro">
-                  <h4 class="title"><b>Social Navigation</b></h4>
-                  <img src="images/cvpr21_social_nav.png" width=250 height=300> </img>
-                </div>
-              </div>
-            </div>
-
             <ul>
-              <li><b>Interactive Navigation:</b> the agent is required to reach a navigation goal specified by a
-                coordinate (as in PointNav[2]) given visual information (RGB+D images). The agent is allowed (or even
-                encouraged) to collide and interact with the environment in order to push obstacles away to clear the
-                path. Note that all objects in our scenes are assigned realistic physical weight and fully interactable.
-                However, as in the real world, while some objects are light and movable by the robot, others are not.
-                Along with the furniture objects originally in the scenes, we also add additional objects (e.g. shoes
-                and toys) from the <a
-                  href="https://app.ignitionrobotics.org/GoogleResearch/fuel/collections/Google%20Scanned%20Objects">Google
-                  Scanned Objects dataset</a> to simulate real-world clutter. We will use Interactive Navigation Score
-                (INS)[3] to evaluate agents' performance in this task.
-              </li>
-              <li><b>Social Navigation:</b> the agent is required to navigate the goal specified by a coordinate while
-              moving around pedestrians in the environment. Pedestrians in the scene move towards randomly sampled
-              locations, and their movement is simulated using the social-forces model ORCA [4] integrated in iGibson [1],
-              similar to the simulation enviroments in [5]. The agent shall avoid
-              collisions or proximity to pedestrians beyond a threshold (distance <0.3 meter) to avoid episode
-              termination. It should also maintain a comfortable distance to pedestrians (distance <0.5 meter), beyond
-              which the score is penalized but episodes are not terminated. We will use the average of STL (Success
-              weighted by Time Length) and PSC (Personal Space Compliance) to evaluate the agents' performance. 
-
-              More details can be found in the "Evaluation Metrics" section below.</li>
-
+              <li>Realistic: </li>
+              <li>Diverse: </li>
+              <li>Complex: </li>
             </ul>
+            <br>
           </div>
         </div>
       </div>
       <p>
       </p>
-
-      <h3> References </h3>
-      <p style="margin-left: 40px">[1] <a target="blank" href="https://arxiv.org/abs/2012.02924">iGibson, a Simulation Environment 
-      for Interactive Tasks in Large Realistic Scenes.</a>. Bokui Shen, Fei Xia, Chengshu Li, Roberto Martín-Martín, 
-      Linxi Fan, Guanzhi Wang, Shyamal Buch, Claudia D'Arpino, Sanjana Srivastava, Lyne P Tchapmi, Micael E Tchapmi, 
-      Kent Vainio, Li Fei-Fei, Silvio Savarese, 2020.</p>  
-      <p style="margin-left: 40px">[2] <a target="blank" href="https://arxiv.org/abs/1807.06757">On evaluation of embodied navigation
-          agents</a>. Peter Anderson, Angel Chang, Devendra Singh Chaplot, Alexey Dosovitskiy, Saurabh Gupta, Vladlen
-        Koltun, Jana Kosecka, Jitendra Malik, Roozbeh Mottaghi, Manolis Savva, Amir R. Zamir. arXiv:1807.06757, 2018.
-      </p>
-      <p style="margin-left: 40px">[3] <a target="blank" href="https://ieeexplore.ieee.org/abstract/document/8954627/">Interactive
-          Gibson Benchmark: A Benchmark for Interactive Navigation in Cluttered Environments</a>. Fei Xia, William B.
-        Shen, Chengshu Li, Priya Kasimbeg, Micael Tchapmi, Alexander Toshev, Roberto Martín-Martín, and Silvio Savarese.
-        RA-L, to be presented at ICRA 2020.</p>
-      <p style="margin-left: 40px">[4] <a target="blank" href="https://gamma.cs.unc.edu/RVO2/">RVO2 Library: Reciprocal Collision
-          Avoidance for Real-Time Multi-Agent Simulation</a>. Jur van den Berg, Stephen J. Guy, Jamie Snape, Ming C.
-        Lin, and Dinesh Manocha, 2011.</p>
-      <p style="margin-left: 40px">[5] <a target="blank" href="https://arxiv.org/abs/2010.08600">Robot Navigation in Constrained 
-      Pedestrian Environments using Reinforcement Learning.</a>. Claudia Pérez-D'Arpino, Can Liu, Patrick Goebel, 
-      Roberto Martín-Martín and Silvio Savarese, 2020.</p>
-      
-
-
-
   </section>
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
 
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
-            <h2>Evaluation Metrics</h2>
-            <hr>
-
-            <ul>
-              <li><b>Interactive Navigation:</b> We will use Interactive Navigation Score (INS) as our evaluation
-                metrics. INS is an average of Path Efficiency and Effort Efficiency. Path Efficiency is equivalent to
-                SPL (Success weighted by Shortest Path). Effort Efficiency captures both the excess of displaced mass
-                (kinematic effort) and applied force (dynamic effort) for interaction with objects. We argue that the
-                agent needs to strike a healthy balance between taking a shorter path to the goal and causing less
-                disturbance to the environment. More details can be found in <a
-                  href="https://ieeexplore.ieee.org/abstract/document/8954627/">our paper</a>.
-              </li>
-
-
-              <li>
-                <b>Social Navigation:</b> We will use the average of STL (Success weighted by Time Length) and PSC
-                (Personal Space Compliance) as our evaluation metrics. STL is computed by success *
-                (time_spent_by_ORCA_agent / time_spent_by_robot_agent). The second term is the number of timesteps that
-                an oracle ORCA agent take to reach the same goal assigned to the robot. This value is clipped by 1. In
-                the context of Social Navigation, we argue STL is more applicable than SPL because a robot agent can
-                achieve perfect SPL by "waiting out" all pedestrians before it makes a move, which defeats the purpose
-                of the task. PSC (Personal Space Compliance) is computed as the percentage of timesteps that the robot
-                agent comply with the pedestrians' personal space (distance >= 0.5 meter). We argue that the agent needs
-                to strike a heathy balance between taking a shorted time to reach the goal and incuring less personal
-                space violation to the pedestrians.
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-
-  </section>
-
-  <section id="method">
-    <div class="container">
-      <div class="row method-container">
-
-        <div class="section-header">
-          <div class="col-lg-12 col-md-12">
-
-            <h2>Dataset</h2>
-            <hr>
-
-            <p>We provide 8 scenes reconstructed from real world apartments in total for training in iGibson. All
-              objects in the scenes are assigned realistic weight and fully interactable. For interactive navigation, we
-              also provide 20 additional small objects (e.g. shoes and toys) from the <a
-                href="https://app.ignitionrobotics.org/GoogleResearch/fuel/collections/Google%20Scanned%20Objects">Google
-                Scanned Objects dataset</a>. For fairness, <b>please only use these scenes and objects for training.</b>
-            </p>
-            <p>For evaluation, we have 2 unseen scenes in our <b>dev</b> split and 5 unseen scenes in our <b>test</b>
-              split.
-              We also use 10 unseen small objects (they will share the same object categories as the 20 training small
-              objects, but they will be different object instances).</p>
-            <div class="col-lg-12 col-md-12">
-              <div class="box3 intro">
-                <h4 class="title"><b>8 Training Scenes</b></h4>
-                <img src="images/cvpr21_dataset.gif" width=640 height=320> </img>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-  </section>
-
-  <section id="method">
-    <div class="container">
-      <div class="row method-container">
-
-        <div class="section-header">
-          <div class="col-lg-12 col-md-12">
-
             <h2>Setup</h2>
             <hr>
             <p> We adopt the following task setup:</p>
@@ -339,24 +171,52 @@
             <p>The tech spec for the robot and the camera sensor can be found in our <a
                 href="https://github.com/StanfordVL/iGibsonChallenge2021/blob/master/Parameters.md">starter code</a>.
             </p>
-            <p><b>For Interactive Navigation</b>, we place N additional small objects (e.g. toys, shoes) near the
-              robot's shortest path to the goal (N is proportional to the path length). These objects are generally
-              physically lighter than the objects originally in the scenes (e.g. tables, chairs).</p>
-            <p><b>For Social Navigation</b>, we place M pedestrians randomly in the scenes that pursue their own random
-              goals during the episode while respecting each other's personal space (M is proportional to the physical
-              size of the scene). The pedestrians have the same maximum speed as the robot. They are aware of the robot
-              so they won't walk straight into the robot. However, they also won't yield to the robot: if the robot
-              moves straight towards the pedestrians, it will hit them and the episode will fail.</p>
           </div>
         </div>
       </div>
-
   </section>
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
 
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Metrics and Scoring</h2>
+            <hr>
+            From paper and workshop proposal.
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Datasets</h2>
+            <hr>
+            Scenes, objects, instances.
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Getting Started</h2>
+            <hr>
+            Registration, installation, starter code.
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
 
@@ -398,13 +258,10 @@
           </div>
         </div>
       </div>
-
   </section>
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
 
@@ -454,12 +311,7 @@
           </div>
         </div>
       </div>
-
   </section>
-
-
-
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
@@ -475,9 +327,7 @@
           </div>
         </div>
       </div>
-
   </section>
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
@@ -531,9 +381,7 @@
           </div>
         </div>
       </div>
-
   </section>
-
   <section id="method">
     <div class="container">
       <div class="row method-container">
@@ -544,107 +392,119 @@
             <h2>Organizers</h2>
             <hr>
             The iGibson Challenge 2021 is organized by the <a href="http://svl.stanford.edu">Stanford Vision and
-              Learning Lab</a> and <a href="https://research.google/teams/brain/robotics/">Robotics at Google</a>:
-
-            <div class="row">
-              <div class="col-xs-2 authornames">
-              </div>
-              <div class="col-xs-4 authornames">
-                <a href="http://svl.stanford.edu/" align="middle">
-                  <img src="images/svllogo.jpg" class="img-responsive">
-                </a>
-              </div>
-
-              <div class="col-xs-4 authornames">
-              </div>
-              <div class="col-xs-4 authornames">
-                <a href="https://research.google/teams/brain/robotics/" align="middle">
-                  <img src="images/googlebrain.jpg" class="img-responsive">
-                </a>
-              </div>
-            </div>
-
-
-
+              Learning Lab</a>
             <hr>
             <div class="row">
-              <div class="col-xs-1 authornames"> </div>
-
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="http://chengshuli.me" align="middle">
                   <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
                   <font size="3">Chengshu Li</font>
                 </a>
               </div>
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="https://www.linkedin.com/in/jaewoo-jang-a6909968" align="middle">
-                  <img src="images/jaewoo.jpeg" class="img-circle img-responsive">
-                  <font size="3">Jaewoo Jang</font>
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Sanjana Srivastava</font>
                 </a>
               </div>
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
+                <a href="https://www.linkedin.com/in/jaewoo-jang-a6909968" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Michael Lingelbach</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
                 <a href="http://fxia.me" align="middle">
                   <img src="http://svl.stanford.edu/assets/img/square/fei_xia.png" class="img-circle img-responsive">
                   <font size="3">Fei Xia</font>
                 </a>
               </div>
 
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="https://robertomartinmartin.com/" align="middle">
                   <img src="http://svl.stanford.edu/assets/img/square/roberto_martinmartin.jpg"
                     class="img-circle img-responsive">
                   <font size="3">Roberto Martín-Martín</font>
                 </a>
               </div>
-
-              <div class="col-xs-2 authornames">
-                <a href="https://ai.stanford.edu/~cdarpino/" align="middle">
-                  <img src="http://svl.stanford.edu/assets/img/square/claudia.jpg" class="img-circle img-responsive">
-                  <font size="3">Claudia D'Arpino</font>
-                </a>
-              </div>
-
-
-
-            </div>
-
-            <div class="row">
-              <div class="col-xs-2 authornames"> </div>
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="https://ai.google/research/people/AlexanderToshev/" align="middle">
-                  <img src="images/alex.jpg" class="img-circle img-responsive">
-                  <font size="3">Alexander Toshev</font>
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Cem Gokmen</font>
                 </a>
               </div>
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="https://research.google/people/author35466/" align="middle">
-                  <img src="images/anthony.jpg" class="img-circle img-responsive">
-                  <font size="3">Anthony Francis</font>
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Shyamal Buch</font>
                 </a>
               </div>
-
-
-              <div class="col-xs-2 authornames">
-                <a href="" align="middle">
-                  <img src="images/Edward_Lee.png" width=200 height=200 class="img-circle img-responsive">
-                  <font size="3">Edward Lee</font>
+              <div class="col-xs-1 authornames">
+                <a href="https://research.google/people/author35466/" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Karen Liu</font>
                 </a>
               </div>
-
-              <div class="col-xs-2 authornames">
+              <div class="col-xs-1 authornames">
                 <a href="http://cvgl.stanford.edu/silvio/" align="middle">
                   <img src="http://pair.stanford.edu/cavin/photos/silvio_savarese.jpg"
                     class="img-circle img-responsive">
                   <font size="3">Silvio Savarese</font>
                 </a>
               </div>
-
-
+              <div class="col-xs-1 authornames">
+                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Hyowen Gweon</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Jiajun Wu</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Fei-Fei Li</font>
+                </a>
+              </div>
             </div>
           </div>
         </div>
   </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
 
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+
+            <h2>References</h2>
+            <hr>
+      <p style="margin-left: 40px">[1] <a target="blank" href="https://arxiv.org/abs/2012.02924">iGibson, a Simulation Environment 
+      for Interactive Tasks in Large Realistic Scenes.</a>. Bokui Shen, Fei Xia, Chengshu Li, Roberto Martín-Martín, 
+      Linxi Fan, Guanzhi Wang, Shyamal Buch, Claudia D'Arpino, Sanjana Srivastava, Lyne P Tchapmi, Micael E Tchapmi, 
+      Kent Vainio, Li Fei-Fei, Silvio Savarese, 2020.</p>  
+      <p style="margin-left: 40px">[2] <a target="blank" href="https://arxiv.org/abs/1807.06757">On evaluation of embodied navigation
+          agents</a>. Peter Anderson, Angel Chang, Devendra Singh Chaplot, Alexey Dosovitskiy, Saurabh Gupta, Vladlen
+        Koltun, Jana Kosecka, Jitendra Malik, Roozbeh Mottaghi, Manolis Savva, Amir R. Zamir. arXiv:1807.06757, 2018.
+      </p>
+      <p style="margin-left: 40px">[3] <a target="blank" href="https://ieeexplore.ieee.org/abstract/document/8954627/">Interactive
+          Gibson Benchmark: A Benchmark for Interactive Navigation in Cluttered Environments</a>. Fei Xia, William B.
+        Shen, Chengshu Li, Priya Kasimbeg, Micael Tchapmi, Alexander Toshev, Roberto Martín-Martín, and Silvio Savarese.
+        RA-L, to be presented at ICRA 2020.</p>
+      <p style="margin-left: 40px">[4] <a target="blank" href="https://gamma.cs.unc.edu/RVO2/">RVO2 Library: Reciprocal Collision
+          Avoidance for Real-Time Multi-Agent Simulation</a>. Jur van den Berg, Stephen J. Guy, Jamie Snape, Ming C.
+        Lin, and Dinesh Manocha, 2011.</p>
+      <p style="margin-left: 40px">[5] <a target="blank" href="https://arxiv.org/abs/2010.08600">Robot Navigation in Constrained 
+      Pedestrian Environments using Reinforcement Learning.</a>. Claudia Pérez-D'Arpino, Can Liu, Patrick Goebel, 
+      Roberto Martín-Martín and Silvio Savarese, 2020.</p>
+          </div>
+        </div>
+      </div>
+  </section>
   <footer id="footer" class="midnight-blue">
     <div class="container">
       <div class="row">
