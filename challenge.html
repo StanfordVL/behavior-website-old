@@ -66,46 +66,25 @@
           <div class="col-lg-12 col-md-12">
 			 <h4> <a href="https://github.com/StanfordVL/iGibsonChallenge2021">[Participation Guidelines]</a> <a href="https://eval.ai/web/challenges/challenge-page/808/overview">[Registration]</a>  <a href="http://svl.stanford.edu/igibson/challenge2020.html">[Starter Code]</a> </h4>
             <p class="section-description">
-              A primary goal of embodied AI research is to develop intelligent agents that can assist humans in their everyday lives in activities like washing dishes or cleaning floors. While recent years we have seen excellent new benchmarks that helped the field, they are usually restricted to a few tasks, short horizon or in simplified scenarios. Solving real-world challenges requires a new benchmark with realistic, diverse, and complex activities. For this, we present in BEHAVIOR, a benchmark with the 100 household activities that represent a new challenge for embodied AI solutions.
+              A primary goal of embodied AI research is to develop intelligent agents that can assist humans in their everyday lives in activities like washing dishes or cleaning floors. While recent years we have seen excellent new benchmarks that helped the field, they are usually restricted to a few tasks, short horizon or in simplified scenarios. Solving real-world challenges requires a new benchmark with realistic, diverse, and complex activities. We present BEHAVIOR, a benchmark with the 100 household activities that represent a new challenge for embodied AI solutions.
             </p>
-<!--             <ul>
-              <li>
-                We significantly revamped <a href="http://svl.stanford.edu/igibson/">iGibson</a>, the Interactive Gibson
-                Environment [1], a novel interactive extension of our photorealistic Gibson simulator that can be used to
-                train agents for navigation tasks in dynamic environments. Our latest iGibson v1.0 offers ultra-fast,
-                high-fidelity rendering, and the state-of-the-art physics simulation from Bullet. </li>
-              <li>
-                We significantly increased the realism of our tasks. For Interactive Navigation, all of the objects in
-                our scenes are interactable this year, not just a subset of them. For Social Navigation, we model
-                pedestrians using the state-of-the-art crowd simulation algorithms this year, instead of random walking.
-              </li>
-            </ul>
+
             <p class="section-description">
-              iGibson Challenge 2021 launches at the <a href="https://embodied-ai.org/">2021 Embodied AI Workshop</a> at
-              the Conference on Computer Vision and Pattern Recognition (CVPR), in coordination with eight other
-              embodied AI challenges supported by 15 academic and research organizations. The joint launch of these
-              challenges this year offers the embodied AI research community an unprecedented opportunity to move toward
-              a common framework for the field, converging around a unified set of tasks, simulation platforms, and 3D
-              assets. The organizers will collectively share results across all these challenges at CVPR in June,
-              providing a unique viewpoint on the state of embodied AI research and new directions for the subfield.
-            </p> -->
+              BEHAVIOR is a challenge where embodied agents make continuous full-body control decisions based on sensor information. Agents need to navigate and manipulate the environment with the goal of acomplishing 100 household activities. BEHAVIOR tests the ability to perceive the environment, plan, and execute complex long-horizon activities that involve multiple objects, rooms, and state transitions.
+            </p>
           </div>
         </div>
       </div>
     </div>
-
   </section>
-
 
   <section id="method">
     <div class="container">
       <div class="row method-container">
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
             <h2>Characteristics of BEHAVIOR</h2>
             <hr>
-
             <div class="row">
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
@@ -113,17 +92,16 @@
                   <img src="media/beha.gif" width=210 height=210> </img>
                 </div>
               </div>
-
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Full Control with Visual Input</b></h4>
+                  <h4 class="title"><b>Full Control based on Visual Input</b></h4>
                   <img src="media/tpv.png" width=210 height=210> </img>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Multiple State Changes Involved</b></h4>
+                  <h4 class="title"><b>Involving Multiple State Changes</b></h4>
                   <img src="media/sliced.gif" width=210 height=210> </img>
 
                 </div>
@@ -133,20 +111,20 @@
           </div>
         </div>
       </div>
-      <div class="row method-container">
+<!--       <div class="row method-container">
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
            The activities in included in BEHAVIOR are:
             <br>
             <ul>
-              <li>Realistic: </li>
-              <li>Diverse: </li>
-              <li>Complex: </li>
+              <li>Realistic: Preserve high fidelity to the real in the activities, the models, the sensing, and actuation of the agent.</li>
+              <li>Diverse: Present variation of scenes, objects, and types of activities.</li>
+              <li>Complex: with large time length, number of objects, required skills, and state changes.</li>
             </ul>
             <br>
           </div>
         </div>
-      </div>
+      </div> -->
       <p>
       </p>
   </section>
@@ -158,18 +136,27 @@
           <div class="col-lg-12 col-md-12">
             <h2>Setup</h2>
             <hr>
-            <p> We adopt the following task setup:</p>
             <ul>
-              <li><b>Observation:</b> (1) Goal position relative to the robot in polar coordinates, (2) current linear
-                and angular velocities, (3) RGB+D images.</li>
-              <li><b>Action:</b> Desired normalized linear and angular velocity.</li>
-              <li><b>Reward:</b> We provide some basic reward functions for reaching goal and making progress. Feel free
+              <li><b>Embodiment:</b> We accept solutions using any of the two following available embodiments:
+              <ul>
+                <li><b>BEHAVIOR Robot:</b> Humanoid avatar with two hands, a head and a torso.</li> 
+                <li><b>Fetch Robot:</b> Model of the commercially available robot Fetch with a single arm.</li>
+              </ul>
+              </li>
+              Both embodiments generate the same observations but differ on the actuation.
+              <li><b>Observations:</b> Participants can choose between two participation tracks that differ by the observations available to the agent. 
+              <ul>
+                <li><b>Track 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects </li> 
+                <li><b>Track 2 - Full observability:</b> The agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
+              </ul>
+              </li>
+              <li><b>Actions:</b> Delta motion for each degree of freedom. For the BEHAVIOR Robot, the agent controls the motion of each hand (6 degrees of freedom) and the closing (1 degree of freedom), the head motion (6 degrees of freedome), and the torso motion (6 degrees of freedome). Head and hands are constrained to certain region around the torso. For the Fetch Robot, the agent controls the delta of each joint of the arm (7 degrees of freedom) and the closing (1 degree of freedom), the head (2 degrees of freedom) and the motion of the base (3 degrees of freedom).</li>
+              <li><b>Reward:</b> We provide feedback about the completion of the task. Our tasks are defined by logic conditions and we provide reward for each component of the goal condition that turns TRUE. Feel free
                 to create your own.</li>
-              <li><b>Termination conditions:</b> The episode termintes after 500 timesteps or the robot collides with
-                any pedestrian in the Social Nav task.</li>
+              <li><b>Termination conditions:</b> The lenght of the episodes are variable depending on the activity and the scene, providing at least 3 times the length required for a human to acomplish it. We also terminate the episode if all elements of the goal condition become TRUE indicating success on the activity.</li>
             </ul>
-            <p>The tech spec for the robot and the camera sensor can be found in our <a
-                href="https://github.com/StanfordVL/iGibsonChallenge2021/blob/master/Parameters.md">starter code</a>.
+            <p>The tech spec for the robots and the camera sensor can be found in our <a
+                href="https://github.com/StanfordVL/BehaviorChallenge2021/blob/master/Parameters.md">starter code</a>.
             </p>
           </div>
         </div>
@@ -178,12 +165,11 @@
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-            <h2>Metrics and Scoring</h2>
+            <h2>Evaluation, Metrics and Scoring</h2>
             <hr>
-            From paper and workshop proposal.
+            We evaluate solutions based on the fraction of the elements in the goal condition that are turned TRUE. A solution is evaluated in all 100 activities, in three different types of instances: a) similar to training (only changing location of task relevant objects), b) with different object instances but in the same scenes as in training, and c) in new scenes not seen during training. We use three instances of each type, totalling 9 activity instances per activity. The final score of a solution is the mean fraction obtain over all 9 instances per activity for all 100 activities. Additionally, we will have a second ranking based on the top 5 activities performed by a solution (mean of all 9 instances in those activities).
           </div>
         </div>
       </div>
@@ -191,12 +177,16 @@
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-            <h2>Datasets</h2>
+            <h2>Simulation Environment and Datasets</h2>
             <hr>
-            Scenes, objects, instances.
+            For this first edition of BEHAVIOR, we provide a fully functional implementation in iGibson 2.0, a new version of our opensource simulation environment. iGibson 2.0 implements all necessary functionalities for the challenge such as object states (temperature, wetness level, cleanliness level, etc.) and sampling functionalities to facilitate development. We also provide the necessary datasets for the Challenge:
+            <ul>
+                <li><b>iGibson 2.0 Dataset of Scenes:</b> New versions of the fully interactive scenes, more densely populated with objects.</li> 
+                <li><b>BEHAVIOR Object Dataset:</b> Dataset of object models annotated with physical and semantic properties. The 3D models are free to use within iGibson 2.0 for BEHAVIOR.</li>
+                <li><b>BEHAVIOR Dataset of Human Demonstrations:</b> To facilitate the development of solutions, we provide a dataset of human successfull executions of the activities in iGibson 2.0 using a virtual reality interface. Humans control the BEHAVIOR Robot embodiment. The dataset includes all state-action pairs and can be deterministically replayed.</li>
+              </ul>
           </div>
         </div>
       </div>
@@ -209,7 +199,7 @@
           <div class="col-lg-12 col-md-12">
             <h2>Getting Started</h2>
             <hr>
-            Registration, installation, starter code.
+            Do you want to participate? Register in our EvalAI site and start downloading and installing the required infrastructure: <b>a new version of iGibson</b>, our simulation environment for interactive tasks, extended now to new object states for BEHAVIOR, <b>the BEHAVIOR Dataset of Objects</b>, with models to participate in the challenge, and <b>our starter code</b>, with examplest to train againts in the tasks.
           </div>
         </div>
       </div>
@@ -222,37 +212,19 @@
 
             <h2>Phases</h2>
             <hr>
-
             <ul>
-
               <li><b>Minival Phase:</b>
                 The purpose of this phase to make sure your policy can be successfully submitted and
                 evaluated. Participants are expected to download our <a
-                  href="https://github.com/StanfordVL/iGibsonChallenge2021">starter code</a> and submit a baseline
+                  href="https://github.com/StanfordVL/BehaviorChallenge2021">starter code</a> and submit a baseline
                 policy, even a trivial one, to our evaluation server to verify their entire pipeline is correct.
               <li><b>Dev Phase:</b>
-                This phase is split into Interactive Navigation and Social Navigation tasks. Participants are
-                expected to submit their solutions to each of the tasks separately. You may use the exact same policy
-                for both tasks if you want, but you still need to submit twice. The results will be evaluated on the
-                dataset <b>dev</b> split and the leaderboard will be updated within 24 hours.
+                In this phase, participants will develop their solutions. Solutions can be submitted and to be evaluated on the
+                dataset <b>dev</b> split and the leaderboard will be updated within 24 hours. We will provide some quota for submissions per participant.
               </li>
-
-              <li>
-                <b> Test Phase:</b> This phase is also split into Interactive Navigation and Social
-                Navigation. Participants are expected to submit a maximum of 5 solutions during the last 15 days of the
+              <li><b> Evaluation Phase:</b> This is the final stage of the challenge and the one that will decide the ranking. Participants are expected to submit a maximum of 5 solutions during the last 15 days of the
                 challenge. The solutions will be evaluated on the dataset <b>test</b> split and the results will NOT be
                 made available until the end of the challenge.
-              </li>
-
-              <li>
-                <b>Winner Demo Phase:</b> To increase visibility, the best three entries of each task of our challenge
-                will have the opportunity to showcase their solutions in live or recorded video format during CVPR2021!
-                All the top runners will be able to highlight their solutions and findings to the CVPR audience. Feel
-                free to check out <a
-                  href="https://www.youtube.com/watch?v=0BvUSjcc0jw&list=PL4XI7L9Xv5fVUMEb1eYOaH8y1b6j8xiMM">our
-                  presentation</a> and <a
-                  href=https://www.youtube.com/watch?v=NBE-iXpyCCU&list=PL4XI7L9Xv5fVULPNAqiGQ2yK07k78-02h>our
-                  participants' presentations</a> from our challenge last year on YouTube.
               </li>
             </ul>
           </div>
@@ -287,24 +259,24 @@
             <table style="width:50%">
               <tr>
                 <td>Challenge Launched</td>
-                <td>February 17, 2021</td>
+                <td>July 17, 2021</td>
               </tr>
               <tr>
                 <td>EvalAI Leaderboard Open, Dev Phase Starts</td>
-                <td>February 24, 2021</td>
+                <td>August 15, 2021</td>
               </tr>
               <tr>
-                <td>Challenge Test Phase Starts</td>
-                <td>May 16, 2021</td>
+                <td>Challenge Evaluation Phase Starts</td>
+                <td>September 15, 2021</td>
               </tr>
 
               <tr>
-                <td>Challenge Dev and Test Phase Ends</td>
-                <td>May 31, 2021</td>
+                <td>Challenge Evaluation Phase Ends</td>
+                <td>October 10, 2021</td>
               </tr>
               <tr>
                 <td>Winner Demo</td>
-                <td>June 20, 2021</td>
+                <td>October 17, 2021</td>
               </tr>
             </table>
 
@@ -312,7 +284,7 @@
         </div>
       </div>
   </section>
-  <section id="method">
+<!--   <section id="method">
     <div class="container">
       <div class="row method-container">
 
@@ -327,8 +299,8 @@
           </div>
         </div>
       </div>
-  </section>
-  <section id="method">
+  </section> -->
+<!--   <section id="method">
     <div class="container">
       <div class="row method-container">
 
@@ -381,7 +353,7 @@
           </div>
         </div>
       </div>
-  </section>
+  </section> -->
   <section id="method">
     <div class="container">
       <div class="row method-container">
