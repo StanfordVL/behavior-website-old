@@ -36,8 +36,6 @@
       <div class="row">
         <div class="site-logo2">
           <img height="45px" src="http://svl.stanford.edu//assets/images/c88c46b9e14bf897e57e597109c97005.png"> </img>
-
-          <img height="45px" src="images/googlelogo.png"> </img>
           <a class="brand">BEHAVIOR Challenge @ ICCV 2021</a>
           <div>
             <a class="brand">
@@ -72,6 +70,10 @@
             <p class="section-description">
               BEHAVIOR is a challenge where embodied agents make continuous full-body control decisions based on sensor information. Agents need to navigate and manipulate the environment with the goal of acomplishing 100 household activities. BEHAVIOR tests the ability to perceive the environment, plan, and execute complex long-horizon activities that involve multiple objects, rooms, and state transitions.
             </p>
+
+            <p class="section-description">
+              The results for this first edition of BEHAVIOR will be presented at ICCV21 in October 17th. Together with the announcement of the ranking, we will hold an exciting workshop on embodied AI interactive problems for long horizon activities, with an exciting set of world-renowed speakers from the field. Check our <a href="#workshop_speakers">list of speakers</a>.
+            </p>
           </div>
         </div>
       </div>
@@ -84,7 +86,6 @@
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
             <h2>Characteristics of BEHAVIOR</h2>
-            <hr>
             <div class="row">
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
@@ -98,16 +99,14 @@
                   <img src="media/tpv.png" width=210 height=210> </img>
                 </div>
               </div>
-
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
                   <h4 class="title"><b>Involving Multiple State Changes</b></h4>
                   <img src="media/sliced.gif" width=210 height=210> </img>
-
                 </div>
               </div>
             </div>
-
+            <hr>
           </div>
         </div>
       </div>
@@ -125,17 +124,13 @@
           </div>
         </div>
       </div> -->
-      <p>
-      </p>
   </section>
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
             <h2>Setup</h2>
-            <hr>
             <ul>
               <li><b>Embodiment:</b> We accept solutions using any of the two following available embodiments:
               <ul>
@@ -158,6 +153,7 @@
             <p>The tech spec for the robots and the camera sensor can be found in our <a
                 href="https://github.com/StanfordVL/BehaviorChallenge2021/blob/master/Parameters.md">starter code</a>.
             </p>
+            <hr>
           </div>
         </div>
       </div>
@@ -168,8 +164,8 @@
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
             <h2>Evaluation, Metrics and Scoring</h2>
-            <hr>
             We evaluate solutions based on the fraction of the elements in the goal condition that are turned TRUE. A solution is evaluated in all 100 activities, in three different types of instances: a) similar to training (only changing location of task relevant objects), b) with different object instances but in the same scenes as in training, and c) in new scenes not seen during training. We use three instances of each type, totalling 9 activity instances per activity. The final score of a solution is the mean fraction obtain over all 9 instances per activity for all 100 activities. Additionally, we will have a second ranking based on the top 5 activities performed by a solution (mean of all 9 instances in those activities).
+            <hr>
           </div>
         </div>
       </div>
@@ -180,13 +176,14 @@
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
             <h2>Simulation Environment and Datasets</h2>
-            <hr>
+            
             For this first edition of BEHAVIOR, we provide a fully functional implementation in iGibson 2.0, a new version of our opensource simulation environment. iGibson 2.0 implements all necessary functionalities for the challenge such as object states (temperature, wetness level, cleanliness level, etc.) and sampling functionalities to facilitate development. We also provide the necessary datasets for the Challenge:
             <ul>
                 <li><b>iGibson 2.0 Dataset of Scenes:</b> New versions of the fully interactive scenes, more densely populated with objects.</li> 
                 <li><b>BEHAVIOR Object Dataset:</b> Dataset of object models annotated with physical and semantic properties. The 3D models are free to use within iGibson 2.0 for BEHAVIOR.</li>
                 <li><b>BEHAVIOR Dataset of Human Demonstrations:</b> To facilitate the development of solutions, we provide a dataset of human successfull executions of the activities in iGibson 2.0 using a virtual reality interface. Humans control the BEHAVIOR Robot embodiment. The dataset includes all state-action pairs and can be deterministically replayed.</li>
-              </ul>
+            </ul>
+            <hr>
           </div>
         </div>
       </div>
@@ -194,12 +191,11 @@
   <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
             <h2>Getting Started</h2>
-            <hr>
             Do you want to participate? Register in our EvalAI site and start downloading and installing the required infrastructure: <b>a new version of iGibson</b>, our simulation environment for interactive tasks, extended now to new object states for BEHAVIOR, <b>the BEHAVIOR Dataset of Objects</b>, with models to participate in the challenge, and <b>our starter code</b>, with examplest to train againts in the tasks.
+            <hr>
           </div>
         </div>
       </div>
@@ -209,9 +205,7 @@
       <div class="row method-container">
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
             <h2>Phases</h2>
-            <hr>
             <ul>
               <li><b>Minival Phase:</b>
                 The purpose of this phase to make sure your policy can be successfully submitted and
@@ -227,6 +221,7 @@
                 made available until the end of the challenge.
               </li>
             </ul>
+            <hr>
           </div>
         </div>
       </div>
@@ -255,7 +250,6 @@
             </style>
 
             <h2>Timeline</h2>
-            <hr>
             <table style="width:50%">
               <tr>
                 <td>Challenge Launched</td>
@@ -279,93 +273,64 @@
                 <td>October 17, 2021</td>
               </tr>
             </table>
-
+            <hr>
           </div>
         </div>
       </div>
   </section>
-<!--   <section id="method">
+  <section id="method">
     <div class="container">
       <div class="row method-container">
-
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
-            <h2>Participate</h2>
-            <hr>
-            Do you want to participate? Download our <a
-              href="https://github.com/StanfordVL/iGibsonChallenge2021">starter package</a> with iGibson and and start
-            developing your own solution right away! You also need to register on the <a href="https://eval.ai/web/challenges/challenge-page/808/overview">EvalAI portal</a>.
+            <h2>Workshop Speakers</h2><a id="workshop_speakers"></a>
+            The results of the first BEHAVIOR Challenge will be announced during our ICCV21 workshop, where we will also enjoy the presentations from the following group of world experts in embodied AI and robotics:</a>
+            <div class="row seven-cols">
+              <div class="col-md-1">
+                <a href="https://www.cs.utexas.edu/users/grauman/" align="middle">
+                  <img src="https://www.cs.utexas.edu/sites/default/files/styles/1200_wide/public/news/grauman1-thumbnail.jpg?itok=4Ox5I46j" class="img-circle img-responsive">
+                  <font size="3">Kristen Grauman</font>
+                </a>
+              </div>
+              <div class="col-md-1"><a href="https://web.stanford.edu/~bohg/" align="middle">
+                  <img src="https://web.stanford.edu/~bohg/img/portrait_square.png" class="img-circle img-responsive">
+                  <font size="3">Jeannette Bohg</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://ai.stanford.edu/~cbfinn/" align="middle">
+                  <img src="https://ai.stanford.edu/~cbfinn/_files/ChelseaFinn_hires.jpg" class="img-circle img-responsive">
+                  <font size="3">Chelsea Finn</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://ckllab.stanford.edu/c-karen-liu" align="middle">
+                  <img src="https://ckllab.stanford.edu/sites/g/files/sbiybj15216/f/styles/large-scaled/public/karen_headshot_2019_jpeg.png?itok=mB01xRJB" class="img-circle img-responsive">
+                  <font size="3">Karen Liu</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://dcl.wustl.edu/people/jzacks/" align="middle">
+                  <img src="https://source.wustl.edu/wp-content/uploads/2015/12/Zacks-Jeffrey.jpg" class="img-circle img-responsive">
+                  <font size="3">Jeff Zacks</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://web.stanford.edu/~hyo/Home.html/" align="middle">
+                  <img src="https://psychology.stanford.edu/sites/psychology/files/styles/hs_medium_square_360x360/public/media/capx/gweon-square1582179036530.jpg?h=b4e301e9&itok=CpQI0I3u" class="img-circle img-responsive">
+                  <font size="3">Hyowon Gweon</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://www.csail.mit.edu/person/leslie-kaelbling" align="middle">
+                  <img src="https://baicsworkshop.github.io/images/leslie.jpg" class="img-circle img-responsive">
+                  <font size="3">Leslie Kaelbling</font>
+                </a></div>
+            </div>
           </div>
+          <hr>
         </div>
-      </div>
-  </section> -->
-<!--   <section id="method">
-    <div class="container">
-      <div class="row method-container">
-
-        <div class="section-header">
-          <div class="col-lg-12 col-md-12">
-
-            <h2>FAQ</h2>
-            <hr>
-            <ul>
-              <li>
-                <b>Q: Where should I watch out for any latest announcement about this challenge?</b>
-                <br>
-                A: Please check out the EvalAI forum of <a href="https://eval.ai/web/challenges/challenge-page/808/overview">our challenge</a>. We will make all of our
-                announcements there.
-              </li>
-              <li>
-                <b>Q: Should I submit the same policy for both tasks? Or should I submit different policies for each of
-                  them?</b>
-                <br>
-                A: You should submit your policy for the two tasks separately on <a href="https://eval.ai/web/challenges/challenge-page/808/overview">EvalAI portal</a>. They are in
-                two concurrent phases: Interactive Navigation and Social Navigation. In other words, you should submit
-                twice. However, feel free to use the same policy and checkpoint for both tasks if you want.
-              </li>
-              <li>
-                <b>Q: Where can I find the tech spec for the real robot and sensor?</b>
-                <br>
-                A: You can find the tech spec for the robot <a
-                  href="https://www.trossenrobotics.com/locobot-pyrobot-ros-rover.aspx">here</a> and for the sensor
-                Intel® RealSense? D435 <a href="https://www.intelrealsense.com/depth-camera-d435/">here</a>. We have
-                also summarized these information into a easy-to-read table in our <a
-                  href="https://github.com/StanfordVL/iGibsonChallenge2021/blob/master/Parameters.md">starter code</a>.
-              </li>
-              <li>
-                <b>Q: What is the robot's action space?</b>
-                <br>
-                A: We believe that the best action space for natural and efficient navigation is continuous robot
-                velocities (linear and angular). This will be our default action space. However, some participants from
-                our last year's challenge has successfully trained policies using discrete action space (e.g. forward,
-                turn left, turn right) and then implemented a simple converter that converts the discrete actions to
-                robot velocities.
-              </li>
-              <li>
-                <b>Q: What if I have questions that are not answered in FAQ?</b>
-                <br>
-                A: You are highly encouraged to post your question on the EvalAI forum of <a href="https://eval.ai/web/challenges/challenge-page/808/overview">our challenge</a>.
-                Our answers to your questions can help others as well. If you absolutely prefer to ask questions
-                privately, you can email us at chengshu@stanford.edu and jaewooj@stanford.edu.
-              </li>
-              <ul>
-          </div>
-        </div>
-      </div>
-  </section> -->
+  </section>
   <section id="method">
     <div class="container">
       <div class="row method-container">
 
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-
             <h2>Organizers</h2>
-            <hr>
             The iGibson Challenge 2021 is organized by the <a href="http://svl.stanford.edu">Stanford Vision and
-              Learning Lab</a>
-            <hr>
+              Learning Lab</a>:
+
             <div class="row">
               <div class="col-xs-1 authornames">
                 <a href="http://chengshuli.me" align="middle">
@@ -380,7 +345,7 @@
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="https://www.linkedin.com/in/jaewoo-jang-a6909968" align="middle">
+                <a href="" align="middle">
                   <img src="https://pbs.twimg.com/profile_images/1291846610414997505/J5QTYSTN_400x400.jpg" class="img-circle img-responsive">
                   <font size="3">Michael Lingelbach</font>
                 </a>
@@ -400,19 +365,19 @@
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="https://ai.google/research/people/AlexanderToshev/" align="middle">
+                <a href="https://www.cemgokmen.com/" align="middle">
                   <img src="https://www.cemgokmen.com/assets/img/bio-photo.jpg" class="img-circle img-responsive">
                   <font size="3">Cem Gokmen</font>
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="https://research.google/people/author35466/" align="middle">
-                  <img src="https://lh3.googleusercontent.com/proxy/fcP9KYlqZ4Tw93t5nJZuWz9iooVwE8iFt3jtBmRyf9SwIHi-5SuD8AidnoRE2xG2dXugWtE_H84ckboMHDj1ZFNs" class="img-circle img-responsive">
+                <a href="" align="middle">
+                  <img src="http://vision.stanford.edu/img/shyamal.jpg" class="img-circle img-responsive">
                   <font size="3">Shyamal Buch</font>
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="https://research.google/people/author35466/" align="middle">
+                <a href="https://ckllab.stanford.edu/c-karen-liu" align="middle">
                   <img src="https://ckllab.stanford.edu/sites/g/files/sbiybj15216/f/styles/large-scaled/public/karen_headshot_2019_jpeg.png?itok=mB01xRJB" class="img-circle img-responsive">
                   <font size="3">Karen Liu</font>
                 </a>
@@ -425,19 +390,19 @@
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                <a href="https://web.stanford.edu/~hyo/Home.html" align="middle">
                   <img src="https://bingschool.stanford.edu/sites/bingschool/files/styles/hs_medium_square_360x360/public/media/capx/gweon1582179036530.jpg?h=1641edec&itok=a3TcTu8Y" class="img-circle img-responsive">
-                  <font size="3">Hyowen Gweon</font>
+                  <font size="3">Hyowon Gweon</font>
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                <a href="https://jiajunwu.com/" align="middle">
                   <img src="https://jiajunwu.com/images/Jiajun_Wu.jpg" class="img-circle img-responsive">
                   <font size="3">Jiajun Wu</font>
                 </a>
               </div>
               <div class="col-xs-1 authornames">
-                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                <a href="https://engineering.stanford.edu/people/fei-fei-li" align="middle">
                   <img src="https://engineering.stanford.edu/sites/default/files/styles/large-square/public/9818d36da9c8e04dc45603a690b1e7ce.jpg?itok=s_I8jyVm" class="img-circle img-responsive">
                   <font size="3">Fei-Fei Li</font>
                 </a>
@@ -455,24 +420,14 @@
 
             <h2>References</h2>
             <hr>
-      <p style="margin-left: 40px">[1] <a target="blank" href="https://arxiv.org/abs/2012.02924">iGibson, a Simulation Environment 
-      for Interactive Tasks in Large Realistic Scenes.</a>. Bokui Shen, Fei Xia, Chengshu Li, Roberto Martín-Martín, 
+      <p style="margin-left: 40px">[1] <a target="blank" href="https://arxiv.org/abs/2012.02924">iGibson 1.0: A Simulation Environment 
+      for Interactive Tasks in Large Realistic Scenes.</a>. Bokui Shen*, Fei Xia*, Chengshu Li*, Roberto Martín-Martín*, 
       Linxi Fan, Guanzhi Wang, Shyamal Buch, Claudia D'Arpino, Sanjana Srivastava, Lyne P Tchapmi, Micael E Tchapmi, 
-      Kent Vainio, Li Fei-Fei, Silvio Savarese, 2020.</p>  
-      <p style="margin-left: 40px">[2] <a target="blank" href="https://arxiv.org/abs/1807.06757">On evaluation of embodied navigation
-          agents</a>. Peter Anderson, Angel Chang, Devendra Singh Chaplot, Alexey Dosovitskiy, Saurabh Gupta, Vladlen
-        Koltun, Jana Kosecka, Jitendra Malik, Roozbeh Mottaghi, Manolis Savva, Amir R. Zamir. arXiv:1807.06757, 2018.
-      </p>
+      Kent Vainio, Li Fei-Fei, Silvio Savarese, IROS 2021.</p>  
       <p style="margin-left: 40px">[3] <a target="blank" href="https://ieeexplore.ieee.org/abstract/document/8954627/">Interactive
-          Gibson Benchmark: A Benchmark for Interactive Navigation in Cluttered Environments</a>. Fei Xia, William B.
+          Gibson Benchmark (iGibson 0.5): A Benchmark for Interactive Navigation in Cluttered Environments</a>. Fei Xia, William B.
         Shen, Chengshu Li, Priya Kasimbeg, Micael Tchapmi, Alexander Toshev, Roberto Martín-Martín, and Silvio Savarese.
-        RA-L, to be presented at ICRA 2020.</p>
-      <p style="margin-left: 40px">[4] <a target="blank" href="https://gamma.cs.unc.edu/RVO2/">RVO2 Library: Reciprocal Collision
-          Avoidance for Real-Time Multi-Agent Simulation</a>. Jur van den Berg, Stephen J. Guy, Jamie Snape, Ming C.
-        Lin, and Dinesh Manocha, 2011.</p>
-      <p style="margin-left: 40px">[5] <a target="blank" href="https://arxiv.org/abs/2010.08600">Robot Navigation in Constrained 
-      Pedestrian Environments using Reinforcement Learning.</a>. Claudia Pérez-D'Arpino, Can Liu, Patrick Goebel, 
-      Roberto Martín-Martín and Silvio Savarese, 2020.</p>
+        RA-L, ICRA 2020.</p>
           </div>
         </div>
       </div>
