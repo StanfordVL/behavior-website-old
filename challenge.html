@@ -139,13 +139,18 @@
               </ul>
               </li>
               Both embodiments generate the same observations but differ on the actuation.
-              <li><b>Observations:</b> Participants can choose between two participation tracks that differ by the observations available to the agent. 
+              <li><b>Observations:</b> Participants can choose between two observation modes with different observations available to the agent. Solutions using different observation modes are evaluated separately:
               <ul>
-                <li><b>Track 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects </li> 
-                <li><b>Track 2 - Full observability:</b> The agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
+                <li><b>Observation Mode 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects </li> 
+                <li><b>Observation Mode 2 - Full observability:</b> The agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
               </ul>
               </li>
               <li><b>Actions:</b> Delta motion for each degree of freedom. For the BEHAVIOR Robot, the agent controls the motion of each hand (6 degrees of freedom) and the closing (1 degree of freedom), the head motion (6 degrees of freedome), and the torso motion (6 degrees of freedome). Head and hands are constrained to certain region around the torso. For the Fetch Robot, the agent controls the delta of each joint of the arm (7 degrees of freedom) and the closing (1 degree of freedom), the head (2 degrees of freedom) and the motion of the base (3 degrees of freedom).</li>
+              <li><b>Grasping:</b> We provide two grasping modes, realistic and "sticky hand". Both are activated using one degree of freedom of the action space. Solutions using different grasping modes are evaluated separately:
+              <ul>
+                <li><b>Grasping Mode 1 - Realistic:</b> Objects need to be grasped by closing the hand around them, requiring more accurate pregrasping procedures.</li> 
+                <li><b>Grasping Mode 2 - Sticky Hand:</b> Once the grasping is activated, any point of the hand/end-effector in contact with the object would be rigidly connected. This simplifies grasping.</li>
+              </ul>
               <li><b>Reward:</b> We provide feedback about the completion of the task. Our tasks are defined by logic conditions and we provide reward for each component of the goal condition that turns TRUE. Feel free
                 to create your own.</li>
               <li><b>Termination conditions:</b> The lenght of the episodes are variable depending on the activity and the scene, providing at least 3 times the length required for a human to acomplish it. We also terminate the episode if all elements of the goal condition become TRUE indicating success on the activity.</li>
