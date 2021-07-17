@@ -146,6 +146,7 @@
               </ul>
               </li>
               <li><b>Actions:</b> Delta motion for each degree of freedom. For the BEHAVIOR Robot, the agent controls the motion of each hand (6 degrees of freedom) and the closing (1 degree of freedom), the head motion (6 degrees of freedome), and the torso motion (6 degrees of freedome). Head and hands are constrained to certain region around the torso. For the Fetch Robot, the agent controls the delta of each joint of the arm (7 degrees of freedom) and the closing (1 degree of freedom), the head (2 degrees of freedom) and the motion of the base (3 degrees of freedom).</li>
+              <li><b>Action Primitives:</b>To facilitate the development of solutions, we provide a set of action primitives using motion planners for simple skills like picking an object or placing it in the environment. These primitives can bootstrap the creation of your own solution but are not sufficient to achieve all 100 BEHAVIOR activities. </li>
               <li><b>Grasping:</b> We provide two grasping modes, realistic and "sticky hand". Both are activated using one degree of freedom of the action space. Solutions using different grasping modes are evaluated separately:
               <ul>
                 <li><b>Grasping Mode 1 - Realistic:</b> Objects need to be grasped by closing the hand around them, requiring more accurate pregrasping procedures.</li> 
