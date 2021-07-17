@@ -132,7 +132,7 @@
           <div class="col-lg-12 col-md-12">
             <h2>Setup</h2>
             <ul>
-              <li><b>Embodiment:</b> We accept solutions using any of the two following available embodiments:
+              <li><b>Embodiment:</b> We accept solutions using any of these two available embodiments:
               <ul>
                 <li><b>BEHAVIOR Robot:</b> Humanoid avatar with two hands, a head and a torso.</li> 
                 <li><b>Fetch Robot:</b> Model of the commercially available robot Fetch with a single arm.</li>
@@ -141,8 +141,8 @@
               Both embodiments generate the same observations but differ on the actuation.
               <li><b>Observations:</b> Participants can choose between two observation modes with different observations available to the agent. Solutions using different observation modes are evaluated separately:
               <ul>
-                <li><b>Observation Mode 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects </li> 
-                <li><b>Observation Mode 2 - Full observability:</b> The agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
+                <li><b>Observation Mode 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects, and proprioceptive information. </li> 
+                <li><b>Observation Mode 2 - Full observability:</b> In addition to the signals of the Mode 1, the agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
               </ul>
               </li>
               <li><b>Actions:</b> Delta motion for each degree of freedom. For the BEHAVIOR Robot, the agent controls the motion of each hand (6 degrees of freedom) and the closing (1 degree of freedom), the head motion (6 degrees of freedome), and the torso motion (6 degrees of freedome). Head and hands are constrained to certain region around the torso. For the Fetch Robot, the agent controls the delta of each joint of the arm (7 degrees of freedom) and the closing (1 degree of freedom), the head (2 degrees of freedom) and the motion of the base (3 degrees of freedom).</li>
