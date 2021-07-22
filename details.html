@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>iGibson Challenge 2021</title>
+  
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- =======================================================
+      Theme Name: OnePage
+      Theme URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+  
+    <script src="https://kit.fontawesome.com/39b62c948b.js" crossorigin="anonymous"></script>
+  
+  </head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <div class="site-logo2">
+          <img height="45px" src="http://svl.stanford.edu//assets/images/c88c46b9e14bf897e57e597109c97005.png"> </img>
+          <a class="brand">BEHAVIOR Challenge @ ICCV 2021</a>
+          <div>
+            <a class="brand">
+              <h5 class="pull-left">Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments</h5>
+              <h5 class="pull-right"> hosted by the Stanford Vision and Learning Lab</h5>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- /.Navbar-collapse -->
+      </div>
+      
+    </div>
+  </nav>
+  <nav class="navbar navbar-default">
+    <div class="row">
+      <ul id="pages">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="details.html">Challenge Details</a></li>
+        <li><a href="https://docs.google.com/document/d/1u2m9Ld6Qo3eG-fvCzuAZN6lHxwpVVBlwLVdzo_WDlNI/edit?usp=sharing">Guidelines</a></li>
+        <li><a href="https://eval.ai/web/challenges/challenge-page/1190/overview">Registration</a></li>
+        <li><a href="https://github.com/StanfordVL/BehaviorChallenge2021">Code</a></li>
+      </ul>
+    </div>
+  </nav>
+    <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+                <h2>Getting Started</h2>
+                Do you want to participate? Register in our <a href="https://eval.ai/web/challenges/challenge-page/1190">EvalAI site</a>
+                 and start downloading and installing the required infrastructure: <a href="http://svl.stanford.edu/igibson/docs/installation.html">a new version of iGibson</a>, our simulation environment for interactive tasks, extended now to new object states for BEHAVIOR, the BEHAVIOR Dataset of Objects and the  iGibson2.0 Dataset of Scenes (combined in our <a href="https://storage.googleapis.com/gibson_scenes/behavior_data_bundle.zip">participation bundle</a>), with object and house models to participate in the challenge, and <a href="https://github.com/StanfordVL/BehaviorChallenge2021/">our starter code</a>, with examplest to train againts in the tasks. If you want to use human demonstrations to start developing your solutions, you can also download <a href="human_dataset">the BEHAVIOR Dataset of Human Demonstrations</a> in virtual reality.
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+    
+                <style>
+                  table {
+                    border-collapse: collapse;
+                    width: 100%;
+                  }
+    
+                  th,
+                  td {
+                    text-align: left;
+                    padding: 6px;
+                  }
+    
+                  tr:nth-child(odd) {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+    
+                <h2>Timeline</h2>
+                <table style="width:50%">
+                  <tr>
+                    <td>Challenge Launched</td>
+                    <td>July 17, 2021</td>
+                  </tr>
+                  <tr>
+                    <td>EvalAI Leaderboard Open, Dev Phase Starts</td>
+                    <td>August 15, 2021</td>
+                  </tr>
+                  <tr>
+                    <td>Challenge Evaluation Phase Starts</td>
+                    <td>September 15, 2021</td>
+                  </tr>
+    
+                  <tr>
+                    <td>Challenge Evaluation Phase Ends</td>
+                    <td>October 10, 2021</td>
+                  </tr>
+                  <tr>
+                    <td>Winner Demo</td>
+                    <td>October 17, 2021</td>
+                  </tr>
+                </table>
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+    <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+                <h2>Setup</h2>
+                <ul>
+                  <li><b>Embodiment:</b> We accept solutions using any of these two available embodiments:
+                  <ul>
+                    <li><b>BEHAVIOR Robot:</b> Humanoid avatar with two hands, a head and a torso.</li> 
+                    <li><b>Fetch Robot:</b> Model of the commercially available robot Fetch with a single arm.</li>
+                  </ul>
+                  </li>
+                  Both embodiments generate the same observations but differ on the actuation.
+                  <li><b>Observations:</b> Participants can choose between two observation modes with different observations available to the agent. Solutions using different observation modes are evaluated separately:
+                  <ul>
+                    <li><b>Observation Mode 1 - On-board Observations:</b> The agent only gets visual signals at 30 fps including RGB, depth, semantic segmentation, and segmentation of activity-relevant objects, and proprioceptive information. </li> 
+                    <li><b>Observation Mode 2 - Full observability:</b> In addition to the signals of the Mode 1, the agent has access to privileged information about the state of the environment such as the object poses and their state.</li>
+                  </ul>
+                  </li>
+                  <li><b>Actions:</b> Delta motion for each degree of freedom. For the BEHAVIOR Robot, the agent controls the motion of each hand (6 degrees of freedom) and the closing (1 degree of freedom), the head motion (6 degrees of freedome), and the torso motion (6 degrees of freedome). Head and hands are constrained to certain region around the torso. For the Fetch Robot, the agent controls the delta of each joint of the arm (7 degrees of freedom) and the closing (1 degree of freedom), the head (2 degrees of freedom) and the motion of the base (3 degrees of freedom).</li>
+                  <li><b>Action Primitives:</b>To facilitate the development of solutions, we provide a set of action primitives using motion planners for simple skills like picking an object or placing it in the environment. These primitives can bootstrap the creation of your own solution but are not sufficient to achieve all 100 BEHAVIOR activities. </li>
+                  <li><b>Grasping:</b> We provide two grasping modes, realistic and "sticky hand". Both are activated using one degree of freedom of the action space. Solutions using different grasping modes are evaluated separately:
+                  <ul>
+                    <li><b>Grasping Mode 1 - Realistic:</b> Objects need to be grasped by closing the hand around them, requiring more accurate pregrasping procedures.</li> 
+                    <li><b>Grasping Mode 2 - Sticky Hand:</b> Once the grasping is activated, any point of the hand/end-effector in contact with the object would be rigidly connected. This simplifies grasping.</li>
+                  </ul>
+                  <li><b>Reward:</b> We provide feedback about the completion of the task. Our tasks are defined by logic conditions and we provide reward for each component of the goal condition that turns TRUE. Feel free
+                    to create your own.</li>
+                  <li><b>Termination conditions:</b> The lenght of the episodes are variable depending on the activity and the scene, providing at least 3 times the length required for a human to acomplish it. We also terminate the episode if all elements of the goal condition become TRUE indicating success on the activity.</li>
+                </ul>
+                <p>The tech spec for the robots and the camera sensor can be found in our <a
+                    href="https://github.com/StanfordVL/BehaviorChallenge2021/blob/master/Parameters.md">starter code</a>.
+                </p>
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+                <h2>Evaluation, Metrics and Scoring</h2>
+                We evaluate solutions based on the fraction of the elements in the goal condition that are turned TRUE. A solution is evaluated in all 100 activities, in three different types of instances: a) similar to training (only changing location of task relevant objects), b) with different object instances but in the same scenes as in training, and c) in new scenes not seen during training. We use three instances of each type, totalling 9 activity instances per activity. The final score of a solution is the mean fraction obtain over all 9 instances per activity for all 100 activities. Additionally, we will have a second ranking based on the top 5 activities performed by a solution (mean of all 9 instances in those activities).
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+                <h2>Simulation Environment and Datasets</h2>
+                
+                For this first edition of BEHAVIOR, we provide a fully functional implementation in iGibson 2.0, a new version of our opensource simulation environment. iGibson 2.0 implements all necessary functionalities for the challenge such as object states (temperature, wetness level, cleanliness level, etc.) and sampling functionalities to facilitate development. We also provide the necessary datasets for the Challenge:
+                <ul>
+                    <li><b>iGibson 2.0 Dataset of Scenes:</b> New versions of the fully interactive scenes, more densely populated with objects.</li> 
+                    <li><b>BEHAVIOR Object Dataset:</b> Dataset of object models annotated with physical and semantic properties. The 3D models are free to use within iGibson 2.0 for BEHAVIOR (due to artists' copyright, models are encrypted and allowed only to be used with iGibson2.0). You can download a bundle of the iGibson2.0 dataset of scenes and the BEHAVIOR dataset of objects <a href="https://storage.googleapis.com/gibson_scenes/behavior_data_bundle.zip">here</a>. </li>
+                    <li><b><a href="human_dataset">the BEHAVIOR Dataset of Human Demonstrations</a>:</b> To facilitate the development of solutions, we provide a dataset of human successfull executions of the activities in iGibson 2.0 using a virtual reality interface. Humans control the BEHAVIOR Robot embodiment. The dataset includes all state-action pairs and can be deterministically replayed.</li>
+                </ul>
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="method">
+        <div class="container">
+          <div class="row method-container">
+            <div class="section-header">
+              <div class="col-lg-12 col-md-12">
+                <h2>Phases</h2>
+                <ul>
+                  <li><b>Minival Phase:</b>
+                    The purpose of this phase to make sure your policy can be successfully submitted and
+                    evaluated. Participants are expected to download our <a
+                      href="https://github.com/StanfordVL/BehaviorChallenge2021">starter code</a> and submit a baseline
+                    policy, even a trivial one, to our evaluation server to verify their entire pipeline is correct.
+                  <li><b>Dev Phase:</b>
+                    In this phase, participants will develop their solutions. Solutions can be submitted and to be evaluated on the
+                    dataset <b>dev</b> split and the leaderboard will be updated within 24 hours. We will provide some quota for submissions per participant.
+                  </li>
+                  <li><b> Evaluation Phase:</b> This is the final stage of the challenge and the one that will decide the ranking. Participants are expected to submit a maximum of 5 solutions during the last 15 days of the
+                    challenge. The solutions will be evaluated on the dataset <b>test</b> split and the results will NOT be
+                    made available until the end of the challenge.
+                  </li>
+                </ul>
+                <hr>
+              </div>
+            </div>
+          </div>
+      </section>
+    </body>
+
+</html>

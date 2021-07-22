@@ -113,6 +113,22 @@ p {
 
 .navbar {
     margin-bottom: 0;
+    padding-left:30px;
+    align-items: center;
+}
+
+.navbar ul {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  font-weight: bold;
+}
+
+.navbar li {
+  position: relative;
+  padding: 10px;
 }
 
 .navbar-brand {

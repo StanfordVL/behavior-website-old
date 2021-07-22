@@ -1,2 +1,352 @@
-<meta http-equiv="Refresh" content="0; url='http://svl.stanford.edu/behavior/challenge.html'" />
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>iGibson Challenge 2021</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!-- =======================================================
+    Theme Name: OnePage
+    Theme URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+
+  <script src="https://kit.fontawesome.com/39b62c948b.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+  .alignright {
+    float: right;
+  }
+</style>
+
+<body>
+<!-- Header -->
+  
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <div class="site-logo2">
+          <img height="45px" src="http://svl.stanford.edu//assets/images/c88c46b9e14bf897e57e597109c97005.png"> </img>
+          <a class="brand">BEHAVIOR Challenge @ ICCV 2021</a>
+          <div>
+            <a class="brand">
+              <h5 class="pull-left">Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments</h5>
+              <h5 class="pull-right"> hosted by the Stanford Vision and Learning Lab</h5>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- /.Navbar-collapse -->
+      </div>
+      
+    </div>
+    
+  </nav>
+  <nav class="navbar navbar-default">
+    <div class="row">
+      <ul id="pages">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="details.html">Challenge Details</a></li>
+        <li><a href="https://docs.google.com/document/d/1u2m9Ld6Qo3eG-fvCzuAZN6lHxwpVVBlwLVdzo_WDlNI/edit?usp=sharing">Guidelines</a></li>
+        <li><a href="https://eval.ai/web/challenges/challenge-page/1190/overview">Registration</a></li>
+        <li><a href="https://github.com/StanfordVL/BehaviorChallenge2021">Code</a></li>
+        <li><a href="activity_list.html">Activity List</a></li>
+
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  <section id="home">
+  </section>
+  <section id="about">
+  </section>
+
+  
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Introducing BEHAVIOR</h2>
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="box2 intro">
+                  <h4 class="title"><b>100 Common Household Activities</b></h4>
+                  <a href="media/mosaic_behavior.jpg">
+                    <img src="media/beha.gif" width=210 height=210> </img>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="box2 intro">
+                  <h4 class="title"><b>Full Control based on Visual Input</b></h4>
+                  <img src="media/tpv.jpg" width=210 height=210> </img>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="box2 intro">
+                  <h4 class="title"><b>Involving Multiple State Changes</b></h4>
+                  <img src="media/sliced.gif" width=210 height=210> </img>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>About the Project</h2>
+            <p class="section-description">
+              A primary goal of embodied AI research is to develop intelligent agents that can assist humans in their everyday lives in activities like washing dishes or cleaning floors. While recent years we have seen excellent new benchmarks that helped the field, they are usually restricted to a few tasks, short horizon or in simplified scenarios. Solving real-world challenges requires a new benchmark with realistic, diverse, and complex activities. We present BEHAVIOR, a benchmark with the 100 household activities that represent a new challenge for embodied AI solutions.
+            </p>
+
+            <p class="section-description">
+              BEHAVIOR is a challenge <b>in simulation</b> where embodied agents make continuous full-body control decisions based on sensor information. Agents need to navigate and manipulate the simulated environment with the goal of acomplishing 100 household activities (see <a href="media/mosaic_behavior.jpg">here</a> all the activities in pairs of simulated and real-world images, or <a href="activity_list.html">here</a> for the complete list of activities). BEHAVIOR tests the ability to perceive the environment, plan, and execute complex long-horizon activities that involve multiple objects, rooms, and state transitions, all with the reproducibility, safety and observability offered by a realistic physics simulation.
+            </p>
+
+            <p class="section-description">
+              The results for this first edition of BEHAVIOR will be presented at ICCV21 in October 17th. Together with the announcement of the ranking, we will hold an exciting workshop on embodied AI interactive problems for long horizon activities, with an exciting set of world-renowed speakers from the field. Check our <a href="#workshop_speakers">list of speakers</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--       <div class="row method-container">
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+           The activities in included in BEHAVIOR are:
+            <br>
+            <ul>
+              <li>Realistic: Preserve high fidelity to the real in the activities, the models, the sensing, and actuation of the agent.</li>
+              <li>Diverse: Present variation of scenes, objects, and types of activities.</li>
+              <li>Complex: with large time length, number of objects, required skills, and state changes.</li>
+            </ul>
+            <br>
+          </div>
+        </div>
+      </div> -->
+  </section>
+ 
+ 
+  
+
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Workshop Speakers</h2><a id="workshop_speakers"></a>
+            The results of the first BEHAVIOR Challenge will be announced during our ICCV21 workshop, where we will also enjoy the presentations from the following group of world experts in embodied AI and robotics:</a>
+            <div class="row seven-cols">
+              <div class="col-md-1">
+                <a href="https://www.cs.utexas.edu/users/grauman/" align="middle">
+                  <img src="https://www.cs.utexas.edu/sites/default/files/styles/1200_wide/public/news/grauman1-thumbnail.jpg?itok=4Ox5I46j" class="img-circle img-responsive width=210 height=210">
+                  <font size="3">Kristen Grauman</font>
+                </a>
+              </div>
+              <div class="col-md-1"><a href="https://web.stanford.edu/~bohg/" align="middle">
+                  <img src="https://web.stanford.edu/~bohg/img/portrait_square.png" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Jeannette Bohg</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://ai.stanford.edu/~cbfinn/" align="middle">
+                  <img src="https://ai.stanford.edu/~cbfinn/_files/ChelseaFinn_hires.jpg" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Chelsea Finn</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://ckllab.stanford.edu/c-karen-liu" align="middle">
+                  <img src="https://ckllab.stanford.edu/sites/g/files/sbiybj15216/f/styles/large-scaled/public/karen_headshot_2019_jpeg.png?itok=mB01xRJB" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Karen Liu</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://dcl.wustl.edu/people/jzacks/" align="middle">
+                  <img src="https://source.wustl.edu/wp-content/uploads/2015/12/Zacks-Jeffrey.jpg" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Jeff Zacks</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://web.stanford.edu/~hyo/Home.html/" align="middle">
+                  <img src="https://psychology.stanford.edu/sites/psychology/files/styles/hs_medium_square_360x360/public/media/capx/gweon-square1582179036530.jpg?h=b4e301e9&itok=CpQI0I3u" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Hyowon Gweon</font>
+                </a></div>
+              <div class="col-md-1"><a href="https://www.csail.mit.edu/person/leslie-kaelbling" align="middle">
+                  <img src="https://baicsworkshop.github.io/images/leslie.jpg" class="img-circle img-responsive" width=210 height=210>
+                  <font size="3">Leslie Kaelbling</font>
+                </a></div>
+            </div>
+          </div>
+          <hr>
+        </div>
+  </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+            <h2>Organizers and Contact</h2>
+            The iGibson Challenge 2021 is organized by the <a href="http://svl.stanford.edu">Stanford Vision and
+              Learning Lab</a>. For any inquires, contact us at <a href="mailto:behavior.benchmark@gmail.com">behavior.benchmark@gmail.com</a>
+              <p></p>
+            <div class="row">
+              <div class="col-xs-1 authornames">
+                <a href="http://chengshuli.me" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/chengshu.jpg" class="img-circle img-responsive">
+                  <font size="3">Chengshu Li</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://www.linkedin.com/in/sanjana-srivastava5/" align="middle">
+                  <img src="http://svl.stanford.edu/igibson/images/sanjana.jpg" class="img-circle img-responsive">
+                  <font size="3">Sanjana Srivastava</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://github.com/mjlbach/" align="middle">
+                  <img src="https://pbs.twimg.com/profile_images/1291846610414997505/J5QTYSTN_400x400.jpg" class="img-circle img-responsive">
+                  <font size="3">Michael Lingelbach</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="http://fxia.me" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/fei_xia.png" class="img-circle img-responsive" >
+                  <font size="3">Fei Xia</font>
+                </a>
+              </div>
+
+              <div class="col-xs-1 authornames">
+                <a href="https://robertomartinmartin.com/" align="middle">
+                  <img src="http://svl.stanford.edu/assets/img/square/roberto_martinmartin.jpg"
+                    class="img-circle img-responsive">
+                  <font size="3">Roberto Martín-Martín</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://www.cemgokmen.com/" align="middle">
+                  <img src="https://www.cemgokmen.com/assets/img/bio-photo.jpg" class="img-circle img-responsive">
+                  <font size="3">Cem Gokmen</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://cs.stanford.edu/~shyamal" align="middle">
+                  <img src="http://vision.stanford.edu/img/shyamal.jpg" class="img-circle img-responsive">
+                  <font size="3">Shyamal Buch</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://ckllab.stanford.edu/c-karen-liu" align="middle">
+                  <img src="https://ckllab.stanford.edu/sites/g/files/sbiybj15216/f/styles/large-scaled/public/karen_headshot_2019_jpeg.png?itok=mB01xRJB" class="img-circle img-responsive">
+                  <font size="3">Karen Liu</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="http://cvgl.stanford.edu/silvio/" align="middle">
+                  <img src="http://pair.stanford.edu/cavin/photos/silvio_savarese.jpg"
+                    class="img-circle img-responsive">
+                  <font size="3">Silvio Savarese</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://web.stanford.edu/~hyo/Home.html" align="middle">
+                  <img src="https://bingschool.stanford.edu/sites/bingschool/files/styles/hs_medium_square_360x360/public/media/capx/gweon1582179036530.jpg?h=1641edec&itok=a3TcTu8Y" class="img-circle img-responsive">
+                  <font size="3">Hyowon Gweon</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://jiajunwu.com/" align="middle">
+                  <img src="https://jiajunwu.com/images/Jiajun_Wu.jpg" class="img-circle img-responsive">
+                  <font size="3">Jiajun Wu</font>
+                </a>
+              </div>
+              <div class="col-xs-1 authornames">
+                <a href="https://engineering.stanford.edu/people/fei-fei-li" align="middle">
+                  <img src="https://engineering.stanford.edu/sites/default/files/styles/large-square/public/9818d36da9c8e04dc45603a690b1e7ce.jpg?itok=s_I8jyVm" class="img-circle img-responsive">
+                  <font size="3">Li Fei-Fei</font>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+  <section id="method">
+    <div class="container">
+      <div class="row method-container">
+
+        <div class="section-header">
+          <div class="col-lg-12 col-md-12">
+
+            <h2>References</h2>
+            <hr>
+      <p style="margin-left: 40px">[1] <a target="blank" href="https://arxiv.org/abs/2012.02924">iGibson 1.0: A Simulation Environment 
+      for Interactive Tasks in Large Realistic Scenes.</a>. Bokui Shen*, Fei Xia*, Chengshu Li*, Roberto Martín-Martín*, 
+      Linxi Fan, Guanzhi Wang, Shyamal Buch, Claudia D'Arpino, Sanjana Srivastava, Lyne P Tchapmi, Micael E Tchapmi, 
+      Kent Vainio, Li Fei-Fei, Silvio Savarese, IROS 2021.</p>  
+      <p style="margin-left: 40px">[2] <a target="blank" href="https://ieeexplore.ieee.org/abstract/document/8954627/">Interactive
+          Gibson Benchmark (iGibson 0.5): A Benchmark for Interactive Navigation in Cluttered Environments</a>. Fei Xia, William B.
+        Shen, Chengshu Li, Priya Kasimbeg, Micael Tchapmi, Alexander Toshev, Roberto Martín-Martín, and Silvio Savarese.
+        RA-L, ICRA 2020.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer id="footer" class="midnight-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="text-center">
+            <a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+          </div>
+
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=OnePage
+            -->
+            Template designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/#footer-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $('#carousel-slider2').carousel({
+      interval: false
+    })
+
+
+  </script>
+
+</body>
+
+</html>
