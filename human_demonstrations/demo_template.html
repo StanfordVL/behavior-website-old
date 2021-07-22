@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>iGibson Challenge 2021</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- =======================================================
+        Theme Name: OnePage
+        Theme URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+        Author: BootstrapMade
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+    
+    <script src="https://kit.fontawesome.com/39b62c948b.js" crossorigin="anonymous"></script>
+    
+</head>
+<style>
+.alignright {
+    float: right;
+}
+</style>
+
+<body>
+
+<section id="method">
+  <div class="container">
+    <div class="row method-container">
+      <div class="section-header">
+        <div class="col-lg-12 col-md-12">
+          <div class="col-lg-12 col-md-12">
+            <h2> Downloading the dataset </h2>
+            The human dataset is large (~150 gb with compressed hdf5s) and growing. We recommend using the  <a href="https://cloud.google.com/sdk/docs/quickstart#deb">google-cloud-sdk</a> to download our dataset.  We will be uploading additional demonstrations as they finish processing, up to a total of 500. Please report any issues. <br>
+            <br>
+            The entire dataset processed for reinforcement learning (action, all observation modalities) can be downloaded with the following command:<br>
+            <br>
+            gsutil -m rsync gs://gibsonchallenge/behavior_human_demos_v1 ./behavior_human_demos_v1 <br>
+            <br>
+            To download the raw hdf5s, which include eyetracking and individual pose of the VR sensors, please use the following command:<br>
+            <br>
+            gsutil -m rsync gs://gibsonchallenge/behavior_human_demos_raw ./behavior_human_demos_raw<br>
+            <hr>
+          </div>
+          <h2>Individual BEHAVIOR demonstrations</h2>
+             {% for demo_urlstring in demo_list %}
+             <li><a href="https://storage.googleapis.com/gibsonchallenge/behavior_human_demos_v1/{{ demo_urlstring}}">{{demo_urlstring}}</a></li>
+             {% endfor %}
+</body>
+</html>
