@@ -43,7 +43,7 @@
             <br>
             The entire dataset processed for reinforcement learning (action, all observation modalities) can be downloaded with the following command:<br>
             <br>
-            gsutil -m rsync gs://gibsonchallenge/behavior_human_demos_v1 ./behavior_human_demos_v1 <br>
+            gsutil -m rsync gs://gibsonchallenge/behavior_human_demos_v2 ./behavior_human_demos_v2 <br>
             <br>
             To download the raw hdf5s, which include eyetracking and individual pose of the VR sensors, please use the following command:<br>
             <br>
@@ -52,7 +52,7 @@
           </div>
           <h2>Individual BEHAVIOR demonstrations</h2>
              {% for demo_urlstring in demo_list %}
-             <li><a href="https://storage.googleapis.com/gibsonchallenge/behavior_human_demos_v1/{{ demo_urlstring}}">{{demo_urlstring}}</a></li>
+             <li><a href="https://storage.googleapis.com/gibsonchallenge/behavior_human_demos_v2/{{ demo_urlstring}}">{{demo_urlstring}}</a></li>
              {% endfor %}
 </body>
 </html>
