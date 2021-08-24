@@ -83,36 +83,32 @@
           <div class="col-lg-12 col-md-12">
             <h2>What is BEHAVIOR?</h2>
             <p class="section-description">
-              As Embodied Artificial Intelligence progresses, we would expect robotic agents to perform interactive 
+              As embodied artificial intelligence progresses, we would expect robotic agents to perform interactive 
               activities autonomously, with the versatility and robustness of human agents.
-              Where are we in this endeavour? And how could we push the limits of embodied AI and measure progress in it?
-              We propose to confront embodied AI agents with the physical challenges humans encounter 
-              and solve in their everyday life: household activities such as washing dishes, picking up toys, or 
-              cleaning floors.
-              By comparing human and AI performance, we could obtain a picture of the current state of the art of
-              embodied AI research.
-              <b>BEHAVIOR is a challenge in simulation where embodied AI agents make continuous full-body control
-                decisions based on sensor information to fulfill 100 household activities.</b>
+              Where are we in this endeavour? How could we push the limits of embodied AI and measure progress in it?
+              We propose to confront embodied AI agents with some of the physical challenges that humans solve in their everyday life: household activities such as washing dishes, picking up toys, or cleaning floors.
+<!--               By comparing human and AI performance, we could obtain a picture of the current state of the art of
+              embodied AI research. -->
+              <b>BEHAVIOR is a challenge in simulation where embodied AI agents need to plan and execute navigation and manipulation
+                strategies based on sensor information to fulfill 100 household activities.</b>
             </p>
 
             <p class="section-description">
               In BEHAVIOR, agents need to navigate and manipulate a simulated
-              environment with the goal of accomplishing 100 household activities (see <a
-                href="media/mosaic_behavior.jpg">here</a> all the activities in pairs of simulated and real-world
-              depictions, and <a href="activity_list.html">here</a> the complete list of activity labels). BEHAVIOR tests
+              environment with the goal of accomplishing 100 household activities (check images of the activities <a
+                href="media/mosaic_behavior.jpg">here</a>, and the full list <a href="activity_list.html">here</a>). BEHAVIOR tests
               the ability of agents to perceive the environment, plan, and execute complex long-horizon activities that
               involve multiple objects, rooms, and state changes, all with the reproducibility, safety and
-              observability offered by a realistic physics simulation. To evaluate the embodied AI agents, we have 
-              collected human demonstrations in the same tasks and environments using virtual reality. We use these
-              demonstrations as reference to evaluate AI agents, but also provide them as additional help to the challenge participants
-              to develop their artificial solutions.
+              observability offered by a realistic physics simulation. 
+
+              To compare the performance of embodied AI agents to that of humans, we have collected human demonstrations in the same tasks and 
+              environments using virtual reality. The demonstrations serve as reference to compare AI solutions, but they also 
+              be used to develop them.
             </p>
 
             <p class="section-description">
-              The results for this first edition of BEHAVIOR will be presented at ICCV21 on October 17th. Together
-              with the announcement of the ranking, we will hold an exciting workshop on embodied AI interactive
-              problems for long horizon activities, with a set of world-renowned speakers from the field.
-              Check our <a href="#workshop_speakers">list of speakers</a>.
+              The results for this first BEHAVIOR edition will be presented at ICCV21 on October 17th, during a workshop world-renowned <a href="#workshop_speakers">speakers</a> 
+              in perception, embodied intelligence, and robotics.
             </p>
           </div>
         </div>
@@ -130,35 +126,35 @@
             <div class="row">
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>100 Common Household Activities</b></h4>
+                  <h4 class="title"><b>100 Household Activities in Realistic Simulated Homes</b></h4>
                   <a href="media/mosaic_behavior.jpg">
-                    <img src="media/beha.gif" width=210 height=210> </img>
+                    <img src="media/beha.gif" width=300 height=180> </img>
                   </a>
                 </div>
               </div>
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>Decision Making based on Onboard Sensing</b></h4>
+                  <h4 class="title"><b>Decision Making based on Onboard Sensing for Navigation and Manipulation</b></h4>
                   <img src="media/tpv.jpg" width=210 height=210> </img>
                 </div>
               </div>
               <div class="col-lg-4 col-md-12">
                 <div class="box2 intro">
-                  <h4 class="title"><b>More than Pick&Place</b></h4>
+                  <h4 class="title"><b>More than Pick-and-Place</b></h4>
                   <img src="media/sliced.gif" width=210 height=210> </img>
                 </div>
               </div>
             </div>
             <ul>
-              <li><b>100 Household Activities</b>
+              <li><b>100 Household Activities in Realistic Simulated Homes</b>
                 including cleaning, preparing food, tidying, polishing, installing elements, etc. The activities obtained from the American Time Use Survey and 
                 approximate the real distribution of tasks performed by humans in their everyday lives.
               </li>
-              <li><b>Decision Making based on Onboard Sensing:</b>
+              <li><b>Decision Making based on Onboard Sensing for Navigation and Manipulation:</b>
                 the long-horizon activities require to undestand the scene, plan a strategy and execute it controlling the motion of the embodied agent, all based 
                 on the virtual sensor signals generated by onboard sensors such as RGB-D cameras and position encoders; as close as it gets to the challenges of real-world.
               </li>
-              <li><b>More than Pick&Place:</b> accomplishing the BEHAVIOR tasks require changing more than the position of the objects in the environment: they need to be cooked, frozen, soaked, cleaned, ... All these new types of state changes are supported by the provided simulator and enable completely new types of activities. 
+              <li><b>More than Pick-and-Place:</b> accomplishing the BEHAVIOR tasks require changing more than the position of the objects in the environment: they need to be cooked, frozen, soaked, cleaned, ... All these new types of state changes are supported by the provided simulator and enable completely new types of activities. 
               </li>
             </ul>
             <hr>
@@ -166,24 +162,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-
-
-  <!--       <div class="row method-container">
-        <div class="section-header">
-          <div class="col-lg-12 col-md-12">
-           The activities in included in BEHAVIOR are:
-            <br>
-            <ul>
-              <li>Realistic: Preserve high fidelity to the real in the activities, the models, the sensing, and actuation of the agent.</li>
-              <li>Diverse: Present variation of scenes, objects, and types of activities.</li>
-              <li>Complex: with large time length, number of objects, required skills, and state changes.</li>
-            </ul>
-            <br>
-          </div>
-        </div>
-      </div> -->
   </section>
 
   <section id="method">
