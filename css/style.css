@@ -103,7 +103,6 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   vertical-align: middle;
-  line-height: 125%;
 }
 
 .site-logo2 a.brand:hover {
@@ -114,22 +113,6 @@ p {
 
 .navbar {
     margin-bottom: 0;
-    padding-left:30px;
-    align-items: center;
-}
-
-.navbar ul {
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  font-weight: bold;
-}
-
-.navbar li {
-  position: relative;
-  padding: 10px;
 }
 
 .navbar-brand {
@@ -142,11 +125,12 @@ p {
 
 .nav.navbar-nav {
   margin-top:0px;
-	padding:10px;
+	padding:5px;
+  margin-right:-40px;
 }
 
 .navbar-default ul.nav li a {
-	font-size: 14px;
+	font-size: 15px;
 	letter-spacing: 1px;
   color: #000;
 	text-transform: uppercase;
@@ -791,6 +775,17 @@ textarea#message{
   position: relative;
 }
 
+.box4.intro {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 250px;
+  position: relative;
+  background: #d9edf7;
+}
+
+
 
 /*.box.intro:hover {
   padding: 50px 20px;
@@ -815,11 +810,35 @@ textarea#message{
 }
 
 
+.icon2 {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  display: inline-block;
+  border: 6px solid #f7f7f7;
+}
+
+
 
 .icon i {
   display: inline-block;
   background: #8e0d0d;
   border: 2px solid #8e0d0d;
+  padding: 16px;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #f7f7f7;
+  font-size: 24px;
+  height: 65px;
+  width: 65px;
+}
+
+.icon2 i {
+  display: inline-block;
+  background: #0d228e;
+  border: 2px solid #0d228e;
   padding: 16px;
   border-radius: 50%;
   transition: 0.3s;
