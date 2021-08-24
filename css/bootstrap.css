@@ -2058,6 +2058,7 @@ pre code {
   }
   .col-md-1 {
     width: 8.33333333%;
+    text-align:center;
   }
   .col-md-pull-12 {
     right: 100%;
