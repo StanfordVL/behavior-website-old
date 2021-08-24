@@ -9,7 +9,7 @@
   <title>BEHAVIOR Challenge 2021</title>
 
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet" />
   <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -53,9 +53,13 @@
       </div>
 
       <!-- Navbar -->
-
-      <div class="row">
-        <ul id="pages">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul id="options">
           <li><a href="index.html">Home</a></li>
           <li><a
               href="https://docs.google.com/document/d/1u2m9Ld6Qo3eG-fvCzuAZN6lHxwpVVBlwLVdzo_WDlNI/edit?usp=sharing">Participant Guide</a>
@@ -191,7 +195,6 @@
       <div class="row method-container">
         <div class="section-header">
           <div class="col-lg-12 col-md-12">
-             <hr>
             <h2>Getting Started</h2>
             Do you want to participate? Register in our <a href="https://eval.ai/web/challenges/challenge-page/1190">EvalAI site</a>
              and start downloading and installing the required infrastructure: <a href="http://svl.stanford.edu/igibson/docs/installation.html">a new version of iGibson</a>, our simulation environment for interactive tasks, extended now to new object states for BEHAVIOR, the BEHAVIOR Dataset of Objects and the  iGibson2.0 Dataset of Scenes (combined in our <a href="https://storage.googleapis.com/gibson_scenes/behavior_data_bundle.zip">participation bundle</a>), with object and house models to participate in the challenge, and <a href="https://github.com/StanfordVL/BehaviorChallenge2021/">our starter code</a>, with examplest to train againts in the tasks. If you want to use human demonstrations to start developing your solutions, you can also download <a href="human_demonstrations/human_demonstrations.html">the BEHAVIOR Dataset of Human Demonstrations</a> in virtual reality.
@@ -331,85 +334,95 @@
               href="mailto:behavior.benchmark@gmail.com">behavior.benchmark@gmail.com</a>
             <p></p>
             <div class="row">
-              <div class="col-xs-1 authornames">
-                <a href="http://chengshuli.me" align="middle">
-                  <img src="media/chengshu.jpg" class="img-circle img-responsive">
-                  <font size="3">Chengshu Li</font>
-                </a>
-              </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1"><a href="http://chengshuli.me" align="middle">
+                <img src="media/chengshu.jpg" class="img-circle img-responsive"
+                  width=100 height=100>
+                <font size="3">Chengshu Li</font>
+              </a></div>
+              <div class="col-md-1">
                 <a href="https://www.linkedin.com/in/sanjana-srivastava5/" align="middle">
-                  <img src="media/sanjana.jpg" class="img-circle img-responsive">
+                  <img src="media/sanjana.jpg" class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Sanjana Srivastava</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://github.com/mjlbach/" align="middle">
                   <img src="https://pbs.twimg.com/profile_images/1291846610414997505/J5QTYSTN_400x400.jpg"
-                    class="img-circle img-responsive">
+                  class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Michael Lingelbach</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="http://fxia.me" align="middle">
-                  <img src="media/fei_xia.png" class="img-circle img-responsive">
+                  <img src="media/fei_xia.png" class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Fei Xia</font>
                 </a>
               </div>
 
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://robertomartinmartin.com/" align="middle">
                   <img src="media/roberto_martinmartin.jpg"
-                    class="img-circle img-responsive">
+                  class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Roberto Martín-Martín</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://www.cemgokmen.com/" align="middle">
-                  <img src="https://www.cemgokmen.com/assets/img/bio-photo.jpg" class="img-circle img-responsive">
+                  <img src="https://www.cemgokmen.com/assets/img/bio-photo.jpg" class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Cem Gokmen</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://cs.stanford.edu/~shyamal" align="middle">
-                  <img src="media/shyamal.jpg" class="img-circle img-responsive">
+                  <img src="media/shyamal.jpg" class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Shyamal Buch</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://ckllab.stanford.edu/c-karen-liu" align="middle">
                   <img
                     src="https://ckllab.stanford.edu/sites/g/files/sbiybj15216/f/styles/large-scaled/public/karen_headshot_2019_jpeg.png?itok=mB01xRJB"
-                    class="img-circle img-responsive">
+                    class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Karen Liu</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="http://cvgl.stanford.edu/silvio/" align="middle">
                   <img src="media/silvio_savarese.jpg"
-                    class="img-circle img-responsive">
+                  class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Silvio Savarese</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://web.stanford.edu/~hyo/Home.html" align="middle">
                   <img
                     src="https://bingschool.stanford.edu/sites/bingschool/files/styles/hs_medium_square_360x360/public/media/capx/gweon1582179036530.jpg?h=1641edec&itok=a3TcTu8Y"
-                    class="img-circle img-responsive">
+                    class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Hyowon Gweon</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://jiajunwu.com/" align="middle">
-                  <img src="https://jiajunwu.com/images/Jiajun_Wu.jpg" class="img-circle img-responsive">
+                  <img src="https://jiajunwu.com/images/Jiajun_Wu.jpg" class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Jiajun Wu</font>
                 </a>
               </div>
-              <div class="col-xs-1 authornames">
+              <div class="col-md-1">
                 <a href="https://engineering.stanford.edu/people/fei-fei-li" align="middle">
                   <img
                     src="https://engineering.stanford.edu/sites/default/files/styles/large-square/public/9818d36da9c8e04dc45603a690b1e7ce.jpg?itok=s_I8jyVm"
-                    class="img-circle img-responsive">
+                    class="img-circle img-responsive"
+                  width=100 height=100>
                   <font size="3">Li Fei-Fei</font>
                 </a>
               </div>

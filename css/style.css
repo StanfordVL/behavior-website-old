@@ -103,6 +103,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   vertical-align: middle;
+  line-height: 125%;
 }
 
 .site-logo2 a.brand:hover {
