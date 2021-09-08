@@ -811,12 +811,12 @@ textarea#message{
 
 .box4.intro {
   padding: 50px 20px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   text-align: center;
   border: 1px solid #e6e6e6;
-  height: 250px;
+  height: 140px;
   position: relative;
-  background: #d9edf7;
+  background: #faf0f0;
 }
 
 
@@ -871,8 +871,8 @@ textarea#message{
 
 .icon2 i {
   display: inline-block;
-  background: #0d228e;
-  border: 2px solid #0d228e;
+  background: #8e0d0d;
+  border: 2px solid #8e0d0d;
   padding: 16px;
   border-radius: 50%;
   transition: 0.3s;
