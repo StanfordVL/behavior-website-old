@@ -882,6 +882,10 @@ textarea#message{
   width: 65px;
 }
 
+#annotationInterface {
+  width: 100%;
+  height: 100vh;
+}
 
 /*
 .box:hover .icon i {
